@@ -1,38 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #333333;
+    --white: #f5f5f5;
+    --background: var(--white);
+    --foreground: var(--black);
+    --transition: 0.5s ease;
+}
+
+[data-theme="dark"] {
+    --background: var(--black);
+    --foreground: var(--white);
+}
+
+[data-theme="dark"].Theme-wrapper {
+    background: #1a1a1a;
+    color: #fff;
+}
+
 .App {
-  text-align: center;
+    max-width: 728px;
+    margin: 4rem auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > h1 {
+    text-align: center;
+    margin: 1rem 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+[data-theme="dark"] .Repo {
+    background-color: #292828;
+    border-color: #292828;
+    color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Repo {
+    background-color: #dbe2ef;
+    border: 1px solid #ccd3e2;
 }
 
-.App-link {
-  color: #61dafb;
+.Tab {
+    background-color: #f0f0f0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+[data-theme="dark"] .Tab {
+    color: #c9c9c9;
+    border-color: #292828;
+    background-color: #292828;
+}
+
+a {
+    color: #118bee;
+}
+a:active {
+    filter: brightness(0.85);
+}
+
+.SelectedTab {
+    background-color: #4a7edf;
+    color: #fff;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .SelectedTab {
+    background-color: #225ed8;
+    border-color: #225ed8;
+    color: #fff;
+    box-shadow: 0px;
+}
+
+.RepoFullName {
+    color: #2d3748;
+}
+
+[data-theme="dark"] .RepoFullName {
+    color: #d4d4d4;
 }
